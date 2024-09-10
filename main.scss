@@ -1,0 +1,153 @@
+
+$overpass: "Overpass", sans-serif;
+$overpassMono: "Overpass Mono", monospace;
+$ubuntu: "Ubuntu", sans-serif;
+
+
+
+body {
+    background-color: #FAFAFA;
+}
+
+@mixin button-gen {
+    width: 138px;
+    height: 48px;
+    border-radius: 28px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: $overpass;
+    cursor: pointer;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    border-radius: 0px 0px 0px 100px;
+    background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+    height: 600px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .arrow-svg {
+        fill: #FF7B86;
+        transition: all 0.2s;
+    }
+
+    .navigation {
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        padding: 56px 24px 0px 24px;
+        box-sizing: border-box;
+
+        .navigation-ul {
+            position: fixed;
+            background-color: #FFF;
+            width: calc(100% - 48px);
+            height: 511px;
+            left: 50%;
+            top: 125px;
+            transform: translateX(-50%);
+            box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.24);
+            border-radius: 5px;
+            text-align: center;
+            padding: 32px 0px;
+            box-sizing: border-box;
+            @include flex-column();
+            justify-content: space-between;
+
+            .navigation-ul--li--div {
+                @include flex-column();
+                gap: 24px;
+            }
+
+        }
+
+        .open-close {
+            display: flex;
+            align-items: center;
+
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0px;
+            }
+        }
+
+    }
+
+    main {
+        text-align: center;
+        margin-top: 221px;
+        color: #FFF;
+        padding: 0px 24px;
+        box-sizing: border-box;
+
+        h1 {
+            font-family: $overpass;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 8px;
+
+            span {
+                display: block;
+            }
+        }
+
+        .slogan {
+            font-family: $overpassMono;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -1.5px;
+        }
+
+        .learn-start {
+            margin-top: 38px;
+
+            button {
+                @include button-gen;
+
+                &:first-child {
+                    color: #FF505C;
+                    background-color: #FFF;
+                }
+                
+                &:last-child {
+                    border: 1px solid #FFF;
+                    color: #FFF;
+                }
+            }
+        }
+
+    }
+
+    .header-background {
+        // background-color: black;
+        width: 300%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        top: -35%;
+        left: -65%;
+    }
+
+
+}
+
+
+
+.display-none {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+} 

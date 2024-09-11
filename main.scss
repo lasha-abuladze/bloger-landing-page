@@ -52,26 +52,71 @@ body {
             background-color: #FFF;
             width: calc(100% - 48px);
             height: 511px;
-            left: 50%;
             top: 125px;
-            transform: translateX(-50%);
+            transform: translateX(calc(100% + 24px));
             box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.24);
             border-radius: 5px;
             text-align: center;
-            padding: 32px 0px;
+            padding: 32px 24px;
             box-sizing: border-box;
             @include flex-column();
             justify-content: space-between;
+
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $overpass;
+                color: #1F3E5A;
+            }
 
             .navigation-ul--li--div {
                 @include flex-column();
                 gap: 24px;
             }
 
+            .dropdown-ul {
+                margin-top: 24px;
+                padding: 17px 0px 25px 0px;
+                border-radius: 5px;
+                background-color: rgba(45, 46, 64, 0.1);
+
+                li {
+                    margin-top: 12px;
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #1F3E5A;
+                        opacity: 0.75;
+                    }
+
+                    &:first-child {
+                        margin: 0px;
+                    }
+                }
+            }
+
+            .login-signup {
+                @include flex-column();
+                align-items: center;
+                border-top: 1px solid #E8E4E4;
+                padding-top: 24px;
+                box-sizing: border-box;
+
+                button {
+                    @include button-gen();
+
+                    &:last-child {
+                        background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+                        color: #FFF;
+                    }
+                }
+            }
+
         }
 
         .open-close {
-            display: flex;
+            
             align-items: center;
 
             button {
@@ -84,9 +129,10 @@ body {
 
     }
 
+
     main {
         text-align: center;
-        margin-top: 221px;
+        margin-top: 108px;
         color: #FFF;
         padding: 0px 24px;
         box-sizing: border-box;
@@ -140,6 +186,36 @@ body {
     }
 
 
+}
+
+
+.open-navigation {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.close-navigation {
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes moveInLeft {
+    from {
+        transform: translateX(calc(100% + 24px));
+    } to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInRight {
+    from {
+        transform: translateX(0px);
+    } to {
+        transform: translateX(calc(100% + 24px));
+    }
 }
 
 

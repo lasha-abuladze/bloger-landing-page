@@ -22,23 +22,60 @@ body {
       background-color: #FFF;
       width: calc(100% - 48px);
       height: 511px;
-      left: 50%;
       top: 125px;
-      transform: translateX(-50%);
+      transform: translateX(calc(100% + 24px));
       box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.24);
       border-radius: 5px;
       text-align: center;
-      padding: 32px 0px;
+      padding: 32px 24px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      .header .navigation .navigation-ul a {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Overpass", sans-serif;
+        color: #1F3E5A; }
       .header .navigation .navigation-ul .navigation-ul--li--div {
         display: flex;
         flex-direction: column;
         gap: 24px; }
+      .header .navigation .navigation-ul .dropdown-ul {
+        margin-top: 24px;
+        padding: 17px 0px 25px 0px;
+        border-radius: 5px;
+        background-color: rgba(45, 46, 64, 0.1); }
+        .header .navigation .navigation-ul .dropdown-ul li {
+          margin-top: 12px; }
+          .header .navigation .navigation-ul .dropdown-ul li a {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F3E5A;
+            opacity: 0.75; }
+          .header .navigation .navigation-ul .dropdown-ul li:first-child {
+            margin: 0px; }
+      .header .navigation .navigation-ul .login-signup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #E8E4E4;
+        padding-top: 24px;
+        box-sizing: border-box; }
+        .header .navigation .navigation-ul .login-signup button {
+          width: 138px;
+          height: 48px;
+          border-radius: 28px;
+          background: none;
+          border: none;
+          font-size: 16px;
+          font-weight: 700;
+          font-family: "Overpass", sans-serif;
+          cursor: pointer; }
+          .header .navigation .navigation-ul .login-signup button:last-child {
+            background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+            color: #FFF; }
     .header .navigation .open-close {
-      display: flex;
       align-items: center; }
       .header .navigation .open-close button {
         background: none;
@@ -47,7 +84,7 @@ body {
         padding: 0px; }
   .header main {
     text-align: center;
-    margin-top: 221px;
+    margin-top: 108px;
     color: #FFF;
     padding: 0px 24px;
     box-sizing: border-box; }
@@ -88,6 +125,28 @@ body {
     z-index: -1;
     top: -35%;
     left: -65%; }
+
+.open-navigation {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+.close-navigation {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes moveInLeft {
+  from {
+    transform: translateX(calc(100% + 24px)); }
+  to {
+    transform: translateX(0px); } }
+
+@keyframes moveInRight {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(calc(100% + 24px)); } }
 
 .display-none {
   display: none; }

@@ -153,3 +153,99 @@ body {
 
 .rotate {
   transform: rotate(180deg); }
+
+@media only screen and (min-width: 1024px) {
+  .header .arrow-svg {
+    fill: #FFF;
+    transition: all 0.2s; }
+  .header .navigation {
+    max-width: 1115px;
+    margin: auto; }
+    .header .navigation .navigation-ul {
+      position: static;
+      background: none;
+      width: 100%;
+      height: auto;
+      transform: translateX(0px);
+      box-shadow: none;
+      padding: 0px;
+      padding-left: 64px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .header .navigation .navigation-ul a {
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFF; }
+      .header .navigation .navigation-ul .navigation-ul--li--div {
+        display: flex;
+        flex-direction: row;
+        gap: 32px; }
+      .header .navigation .navigation-ul .navigation-ul--li {
+        position: relative; }
+        .header .navigation .navigation-ul .navigation-ul--li:hover .dropdown-ul {
+          display: block; }
+      .header .navigation .navigation-ul .dropdown-ul {
+        margin-top: 24px;
+        padding: 24px;
+        background-color: #fff;
+        text-align: left;
+        position: absolute; }
+        .header .navigation .navigation-ul .dropdown-ul li {
+          margin-top: 12px; }
+          .header .navigation .navigation-ul .dropdown-ul li a {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F3E5A;
+            opacity: 0.75; }
+          .header .navigation .navigation-ul .dropdown-ul li:first-child {
+            margin: 0px; }
+      .header .navigation .navigation-ul .login-signup {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        padding-top: 0px;
+        box-sizing: border-box;
+        background: none; }
+        .header .navigation .navigation-ul .login-signup button {
+          width: 138px;
+          height: 48px;
+          border-radius: 28px;
+          background: none;
+          border: none;
+          font-size: 16px;
+          font-weight: 700;
+          font-family: "Overpass", sans-serif;
+          cursor: pointer;
+          color: #FFF; }
+          .header .navigation .navigation-ul .login-signup button:last-child {
+            background: #FFF;
+            color: #FF505C; }
+            .header .navigation .navigation-ul .login-signup button:last-child:hover {
+              background: #FF7B86;
+              color: #FFF; }
+    .header .navigation .open-close {
+      display: none; }
+  .header main {
+    margin-top: 132px;
+    padding: 0px 24px;
+    box-sizing: border-box; }
+    .header main h1 {
+      font-size: 64px;
+      margin-bottom: 8px; }
+      .header main h1 span {
+        display: inline; }
+    .header main .slogan {
+      font-size: 20px; }
+  .header .header-background {
+    width: 150%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    top: -80%;
+    left: 5%; }
+  .close-navigation {
+    animation-name: as;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; } }

@@ -41,31 +41,36 @@ openClose.addEventListener(`click`, () => {
 navigationDivUl.addEventListener(`click`, (e) => {
 
     if(e.target.classList.contains(`nav-a`)) {
-        const dropdownUl = e.target.closest(`.navigation-ul--li`).querySelector(`.dropdown-ul`);
-        const arrow = e.target.querySelector(`.arrow-svg`);
 
-        if(dropdownUl.classList.contains(`display-none`)) {
-            dropdounUlArr.forEach(el => {
-                if(!el.classList.contains(`display-none`)) {
-                    el.classList.add(`display-none`);
-                    arrow.classList.toggle(`rotate`);
-                }
-            })
+        const styles =window.getComputedStyle(openClose);
 
-        if(arrow.classList.contains(`rotate`)) {
-            arrowArr.forEach(el => {
-                if(el.classList.contains(`rotate`)) {
-                    el.classList.remove(`rotate`);
-                }
-            })
-        }
-
-            dropdownUl.classList.toggle(`display-none`);
-            arrow.classList.toggle(`rotate`);
-        } else {
-            dropdownUl.classList.toggle(`display-none`);
-            arrow.classList.toggle(`rotate`);
-        }
+        if(styles.display !== `none`) {
+            const dropdownUl = e.target.closest(`.navigation-ul--li`).querySelector(`.dropdown-ul`);
+            const arrow = e.target.querySelector(`.arrow-svg`);
+    
+            if(dropdownUl.classList.contains(`display-none`)) {
+                dropdounUlArr.forEach(el => {
+                    if(!el.classList.contains(`display-none`)) {
+                        el.classList.add(`display-none`);
+                        arrow.classList.toggle(`rotate`);
+                    }
+                })
+    
+            if(arrow.classList.contains(`rotate`)) {
+                arrowArr.forEach(el => {
+                    if(el.classList.contains(`rotate`)) {
+                        el.classList.remove(`rotate`);
+                    }
+                })
+            }
+    
+                dropdownUl.classList.toggle(`display-none`);
+                arrow.classList.toggle(`rotate`);
+            } else {
+                dropdownUl.classList.toggle(`display-none`);
+                arrow.classList.toggle(`rotate`);
+            }
+        }      
 
         
     }

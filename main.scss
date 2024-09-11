@@ -26,6 +26,10 @@ body {
     flex-direction: column;
 }
 
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
 
 .header {
     border-radius: 0px 0px 0px 100px;
@@ -176,7 +180,6 @@ body {
     }
 
     .header-background {
-        // background-color: black;
         width: 300%;
         position: absolute;
         top: 0;
@@ -227,3 +230,154 @@ body {
 .rotate {
     transform: rotate(180deg);
 } 
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+    .header {
+    
+        .arrow-svg {
+            fill: #FFF;
+            transition: all 0.2s;
+        }
+    
+        .navigation {
+            max-width: 1115px;
+            margin: auto;
+    
+            .navigation-ul {
+                position: static;
+                background: none;
+                width: 100%;
+                height: auto;
+                transform: translateX(0px);
+                box-shadow: none;
+                padding: 0px;
+                padding-left: 64px;
+                @include flex-row();
+                justify-content: space-between;
+                align-items: center;
+    
+                a {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #FFF;
+                }
+    
+                .navigation-ul--li--div {
+                    @include flex-row(); 
+                    gap: 32px;
+                }
+
+                .navigation-ul--li {
+                    position: relative;
+
+                    &:hover .dropdown-ul {
+                        display: block;
+                    }
+                }
+    
+                .dropdown-ul {
+                    margin-top: 24px;
+                    padding: 24px;
+                    background-color: #fff;
+                    text-align: left;
+                    position: absolute;
+
+    
+                    li {
+                        margin-top: 12px;
+    
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #1F3E5A;
+                            opacity: 0.75;
+                        }
+    
+                        &:first-child {
+                            margin: 0px;
+                        }
+                    }
+                }
+    
+                .login-signup {
+                    @include flex-row();
+                    border: none;
+                    padding-top: 0px;
+                    box-sizing: border-box;
+                    background: none;
+    
+                    button {
+                        @include button-gen();
+                        color: #FFF;
+    
+                        &:last-child {
+                            background: #FFF;
+                            color: #FF505C;
+
+                            &:hover {
+                                background: #FF7B86;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .open-close {
+                display: none;
+            }
+    
+        }
+    
+    
+        main {
+            margin-top: 132px;
+            padding: 0px 24px;
+            box-sizing: border-box;
+    
+            h1 {
+                font-size: 64px;
+                margin-bottom: 8px;
+    
+                span {
+                    display: inline;
+                }
+            }
+    
+            .slogan {
+                font-size: 20px;
+            }
+    
+        }
+    
+        .header-background {
+            width: 150%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            top: -80%;
+            left: 5%;
+        }
+    
+    
+    }
+
+    .close-navigation {
+        animation-name: as;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    
+}
+
+

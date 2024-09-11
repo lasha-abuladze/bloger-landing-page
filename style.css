@@ -281,6 +281,50 @@ body {
     z-index: -1;
     top: -80%;
     left: 5%; }
+  .section--1 {
+    padding: 150px 0px 150px 0px;
+    position: relative;
+    overflow: hidden; }
+    .section--1 h2 {
+      font-family: "Overpass", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 93px; }
+    .section--1 .section-article-img {
+      display: flex;
+      flex-direction: row; }
+      .section--1 .section-article-img .editor {
+        order: 2;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(30%, -50%);
+        width: 585px;
+        height: 582px;
+        background-image: url(./images/illustration-editor-desktop.svg);
+        margin-bottom: 46px; }
+      .section--1 .section-article-img .articles {
+        width: 50%;
+        padding-left: 24px;
+        box-sizing: border-box;
+        text-align: left; }
+        .section--1 .section-article-img .articles h3 {
+          font-family: "Overpass", sans-serif;
+          font-size: 28px;
+          font-weight: 600;
+          color: #1F3E5A;
+          margin-bottom: 16px; }
+          .section--1 .section-article-img .articles h3 span {
+            display: block; }
+        .section--1 .section-article-img .articles p {
+          font-family: "Overpass Mono", monospace;
+          font-size: 16px;
+          font-weight: 400;
+          color: #1F3E5A;
+          letter-spacing: -1.5px;
+          line-height: 20px; }
+  .section--2 {
+    background-color: #FF3E55; }
   .close-navigation {
     animation-name: as;
     animation-duration: 1s;

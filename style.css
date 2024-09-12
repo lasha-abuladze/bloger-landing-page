@@ -366,7 +366,26 @@ body {
           letter-spacing: -1.5px;
           line-height: 20px; }
   .section--2 {
-    background-color: #FF3E55; }
+    padding-top: 50px; }
+    .section--2 .background-section--2 {
+      height: 400px; }
+      .section--2 .background-section--2 img {
+        width: 70%;
+        left: -15%;
+        top: -80%; }
+    .section--2 .phones-svg {
+      width: 472px;
+      left: 3%;
+      bottom: -10%; }
+    .section--2 article {
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      text-align: left;
+      right: 0px;
+      width: 50%; }
+      .section--2 article h2 {
+        margin-bottom: 8px; }
   .close-navigation {
     animation-name: as;
     animation-duration: 1s;

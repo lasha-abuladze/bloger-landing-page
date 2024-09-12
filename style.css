@@ -229,7 +229,7 @@ body {
       letter-spacing: -1.5px;
       line-height: 27px; }
 
-.section--3 .leptop {
+.section--3 .laptop {
   background-image: url(./images/illustration-laptop-mobile.svg); }
 
 .display-none {
@@ -392,6 +392,44 @@ body {
       width: 50%; }
       .section--2 article h2 {
         margin-bottom: 8px; }
+  .section--3 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px; }
+  .section-paragraph {
+    padding: 150px 0px 150px 0px;
+    position: relative;
+    overflow: hidden; }
+    .section-paragraph .section-image {
+      order: 2;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(30%, -50%);
+      width: 585px;
+      height: 582px;
+      background-image: url(./images/illustration-editor-desktop.svg);
+      margin-bottom: 46px; }
+    .section-paragraph .articles {
+      width: 50%;
+      padding-left: 24px;
+      box-sizing: border-box;
+      text-align: left; }
+      .section-paragraph .articles h3 {
+        font-family: "Overpass", sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #1F3E5A;
+        margin-bottom: 16px; }
+        .section-paragraph .articles h3 span {
+          display: block; }
+      .section-paragraph .articles p {
+        font-family: "Overpass Mono", monospace;
+        font-size: 16px;
+        font-weight: 400;
+        color: #1F3E5A;
+        letter-spacing: -1.5px;
+        line-height: 20px; }
   .close-navigation {
     animation-name: as;
     animation-duration: 1s;

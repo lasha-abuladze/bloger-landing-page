@@ -71,7 +71,8 @@ body {
           font-size: 16px;
           font-weight: 700;
           font-family: "Overpass", sans-serif;
-          cursor: pointer; }
+          cursor: pointer;
+          transition: all 0.5s; }
           .header .navigation .navigation-ul .login-signup button:last-child {
             background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
             color: #FFF; }
@@ -111,13 +112,20 @@ body {
         font-size: 16px;
         font-weight: 700;
         font-family: "Overpass", sans-serif;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all 0.5s; }
         .header main .learn-start button:first-child {
           color: #FF505C;
           background-color: #FFF; }
+          .header main .learn-start button:first-child:hover {
+            background-color: #FF7B86;
+            color: #FFF; }
         .header main .learn-start button:last-child {
           border: 1px solid #FFF;
           color: #FFF; }
+          .header main .learn-start button:last-child:hover {
+            background-color: #fff;
+            color: #FF7B86; }
   .header .header-background {
     width: 300%;
     position: absolute;
@@ -328,6 +336,7 @@ body {
           font-weight: 700;
           font-family: "Overpass", sans-serif;
           cursor: pointer;
+          transition: all 0.5s;
           color: #FFF; }
           .header .navigation .navigation-ul .login-signup button:last-child {
             background: #FFF;
@@ -471,3 +480,43 @@ body {
     animation-name: as;
     animation-duration: 1s;
     animation-fill-mode: forwards; } }
+
+@media only screen and (min-width: 1440px) {
+  .section--1 {
+    margin-top: 150px;
+    padding: 300px 0px; }
+    .section--1 h2 {
+      font-size: 40px;
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .section--1 .section-article-img .editor {
+      width: 880px;
+      height: 882px; }
+    .section--1 .section-article-img .articles {
+      padding-left: 12%; }
+      .section--1 .section-article-img .articles h3 span {
+        display: inline; }
+  .section--2 {
+    margin-top: 50px;
+    padding-top: 50px; }
+    .section--2 .background-section--2 img {
+      width: 70%;
+      left: -20%;
+      top: -125%; }
+    .section--2 .phones-svg {
+      width: 572px;
+      left: 3%;
+      bottom: -10%; }
+    .section--2 article {
+      padding-right: 13%; }
+  .section--3 {
+    padding: 250px 0px; }
+    .section--3 .laptop {
+      width: 685px;
+      height: 682px; }
+    .section--3 .articles {
+      padding-left: 13%; }
+  .footer {
+    margin: 0px; } }

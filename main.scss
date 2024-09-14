@@ -19,6 +19,7 @@ body {
     font-weight: 700;
     font-family: $overpass;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 @mixin flex-column {
@@ -168,11 +169,21 @@ body {
                 &:first-child {
                     color: #FF505C;
                     background-color: #FFF;
+
+                    &:hover {
+                        background-color: #FF7B86;
+                        color: #FFF;
+                    }
                 }
                 
                 &:last-child {
                     border: 1px solid #FFF;
                     color: #FFF;
+                    
+                    &:hover {
+                        background-color: #fff;
+                        color: #FF7B86;
+                    }
                 }
             }
         }
@@ -820,6 +831,97 @@ body {
     }
 
     
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+
+    .section--1 {
+        margin-top: 150px;
+        padding: 300px 0px;
+
+        h2 {
+            font-size: 40px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+    
+        .section-article-img {
+            
+            .editor {    
+                width: 880px;
+                height: 882px;
+            }
+    
+            
+        .articles {
+            padding-left: 12%;
+    
+                h3 {
+                    span {
+                        display: inline;
+                    }
+                }
+        }
+        }
+    
+    
+    }
+
+
+////////
+
+    .section--2 {
+        margin-top: 50px;
+        padding-top: 50px;
+
+        .background-section--2 {
+
+            img {
+                width: 70%;
+                left: -20%;
+                top: -125%;
+            }
+        }
+
+        .phones-svg {
+            width: 572px;
+            left: 3%;
+            bottom: -10%;
+        }
+
+        article {
+            padding-right: 13%;
+
+        }
+
+    }
+
+
+
+    .section--3 {
+        padding: 250px 0px;
+
+
+        .laptop {
+
+            width: 685px;
+            height: 682px;
+        }
+
+        .articles {
+
+            padding-left: 13%;
+        }
+    }
+    .footer {
+        margin: 0px;
+    }
+
 }
 
 

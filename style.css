@@ -456,6 +456,17 @@ body {
         color: #1F3E5A;
         letter-spacing: -1.5px;
         line-height: 20px; }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .footer .footer-logo {
+      margin-bottom: 0px;
+      width: 101px;
+      height: 40px; }
+    .footer ul {
+      margin-bottom: 0px;
+      text-align: left; }
   .close-navigation {
     animation-name: as;
     animation-duration: 1s;

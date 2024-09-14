@@ -357,6 +357,48 @@ body {
     }
 }
 
+.footer {
+    border-radius: 0px 100px 0px 0px;
+    background: #24242C;
+    text-align: center;
+    padding: 75px 0px;
+    box-sizing: border-box;
+    margin-top: 100px;
+
+    .footer-logo {
+        margin-bottom: 72px;
+    }
+
+    ul {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin: 0px;
+        }
+
+        a {
+            font-family: $ubuntu;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+        }
+
+        li {
+            margin-bottom: 10px;
+
+            &:first-child {
+                margin: 0px;
+                margin-bottom: 20px;
+
+                a {
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+}
+
 
 
 

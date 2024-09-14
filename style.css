@@ -232,6 +232,32 @@ body {
 .section--3 .laptop {
   background-image: url(./images/illustration-laptop-mobile.svg); }
 
+.footer {
+  border-radius: 0px 100px 0px 0px;
+  background: #24242C;
+  text-align: center;
+  padding: 75px 0px;
+  box-sizing: border-box;
+  margin-top: 100px; }
+  .footer .footer-logo {
+    margin-bottom: 72px; }
+  .footer ul {
+    margin-bottom: 40px; }
+    .footer ul:last-child {
+      margin: 0px; }
+    .footer ul a {
+      font-family: "Ubuntu", sans-serif;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400; }
+    .footer ul li {
+      margin-bottom: 10px; }
+      .footer ul li:first-child {
+        margin: 0px;
+        margin-bottom: 20px; }
+        .footer ul li:first-child a {
+          color: #fff;
+          font-weight: 600; }
+
 .display-none {
   display: none; }
 
